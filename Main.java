@@ -4,20 +4,21 @@ public class Main {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        
         // create an array with 5 number the user inputs
         int [] numArray = getNumbers(5);
+        
         int[] sorted = sortArray(numArray);
         printArray(sorted);
-
-
-
+        
     }
     // get the numbers from the user
     public static int[] getNumbers(int num){
-
         int [] values = new int[num];
         System.out.println("Enter " + num + " numbers");
+        
         for(int i = 0; i< values.length; i++){
+            //populate the array with the user's input, assuming only integers are entered
             values[i] = sc.nextInt();
         }
         return values;
@@ -32,9 +33,8 @@ public class Main {
         /* built in java way to sort an array
         * int sorted[] = Arrays.copyOf(array, array.length)
         * */
-
         int [] sorted = new int[array.length];
-
+        
         for(int i = 0; i < array.length; i ++){
             //create a copy of array and saving it into sorted array
             sorted[i] = array[i];
@@ -44,7 +44,7 @@ public class Main {
         //sort the  array
         while(flag){
             flag = false;
-            for(int i= 0; i< sorted.length-1; i++){
+            for(int i = 0; i< sorted.length-1; i++){
                 if(sorted[i] < sorted[i+1]){
                     //swap the the elements
                     temp = sorted[i];
