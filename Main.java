@@ -37,7 +37,7 @@ public class Main {
         int [] sorted = new int[array.length];
         
         for(int i = 0; i < array.length; i ++){
-            //create a copy of array and saving it into sorted array
+            //create a copy of array and save it into the sorted array
             sorted[i] = array[i];
         }
         boolean flag = true;
